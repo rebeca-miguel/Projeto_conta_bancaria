@@ -39,7 +39,7 @@ public class ContaCorrente extends Conta {
     System.out.println("Saldo anterior: " + saldo);
     contaDestino.depositar(valor);
 
-     System.out.println("=== Extrato Empréstimo ===");
+    System.out.println("=== Extrato Empréstimo ===");
     super.imprimirInfosComuns();
 
     debitos = valor * TAXA_JUROS;

@@ -13,7 +13,7 @@ public class Main {
   private static void CriarBanco() {
     JFrame f;
     f = new JFrame();
-    String nome = JOptionPane.showInputDialog(f, "Entre o Nome do Cliente");
+    String nome = JOptionPane.showInputDialog(f, "Digite o Nome do Cliente");
     Cliente cliente = new Cliente();
     cliente.setNome(nome);
     Conta cc = new ContaCorrente(cliente);
@@ -38,21 +38,21 @@ public class Main {
           if (movimentoC == 1) cc.imprimirExtrato();
           if (movimentoC == 2) {
             double valor =
-                Double.parseDouble(JOptionPane.showInputDialog(f, "Entre com o valor da saque"));
+                Double.parseDouble(JOptionPane.showInputDialog(f, "Digite um valor para o saque"));
             cc.sacar(valor);
             cc.imprimirExtrato();
           }
           if (movimentoC == 3) {
             double valor =
                 Double.parseDouble(
-                    JOptionPane.showInputDialog(f, "Entre com o valor do depósito "));
+                    JOptionPane.showInputDialog(f, "Digite um valor para deposito "));
             cc.depositar(valor);
             cc.imprimirExtrato();
           }
           if (movimentoC == 4) {
             double valor =
                 Double.parseDouble(
-                    JOptionPane.showInputDialog(f, "Entre com o valor da transferência "));
+                    JOptionPane.showInputDialog(f, "Digite um valor para a transferência "));
             cc.transferir(valor, pp);
             cc.imprimirExtrato();
           }
@@ -97,7 +97,7 @@ public class Main {
           }
 
           if (movimentoP == 5) {
-            double valor = Double.parseDouble(JOptionPane.showInputDialog(f, "Entre com o valor para poupar"));
+            double valor = Double.parseDouble(JOptionPane.showInputDialog(f, "Digite um valor para a poupar"));
             pp.investir(valor, pp);
             pp.imprimirExtrato();
             }
